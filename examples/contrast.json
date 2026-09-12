@@ -1,0 +1,26 @@
+{
+  "format": "beyond-words-assessment",
+  "version": 1,
+  "scene": {
+    "version": 1,
+    "context": "proposal",
+    "source": "Author-constructed demonstration; not game or participant evidence.",
+    "title": "Cheerful music in an empty room",
+    "reading": "Warmth with something unresolved.",
+    "move": "arrive",
+    "reference": "",
+    "response": "",
+    "companion": "The cheerful tune against the empty room",
+    "relation": "together",
+    "availability": "present",
+    "order": "",
+    "timed": false,
+    "windowSeconds": null,
+    "cueStart": null,
+    "cueSeconds": null,
+    "protectTiming": false
+  },
+  "before": null,
+  "previewTitle": "",
+  "provenance": "Author-constructed demonstration"
+}

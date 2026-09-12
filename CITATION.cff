@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this software when using this implementation. The theoretical model is described in the author's thesis."
+type: software
+title: "Beyond Words — Scene Companion"
+authors:
+  - family-names: Ye
+    given-names: Yiwei
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/Yeeway69/beyond-words-toolkit"
+url: "https://yeeway69.github.io/beyond-words-toolkit/"
+abstract: "A bounded application of the Atmospheric Communication Model, deriving encounter requirements, coverage signals and comparisons from ordinary scene facts."

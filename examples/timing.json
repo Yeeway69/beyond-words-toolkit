@@ -1,0 +1,26 @@
+{
+  "format": "beyond-words-assessment",
+  "version": 1,
+  "scene": {
+    "version": 1,
+    "context": "proposal",
+    "source": "Author-constructed demonstration; not game or participant evidence.",
+    "title": "A familiar room after the farewell",
+    "reading": "The room feels changed after spending time together.",
+    "move": "return",
+    "reference": "optional",
+    "response": "",
+    "companion": "The cheerful tune",
+    "relation": "together",
+    "availability": "present",
+    "order": "",
+    "timed": true,
+    "windowSeconds": 10,
+    "cueStart": -4,
+    "cueSeconds": 7,
+    "protectTiming": false
+  },
+  "before": null,
+  "previewTitle": "",
+  "provenance": "Author-constructed demonstration"
+}

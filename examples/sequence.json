@@ -1,0 +1,26 @@
+{
+  "format": "beyond-words-assessment",
+  "version": 1,
+  "scene": {
+    "version": 1,
+    "context": "proposal",
+    "source": "Author-constructed demonstration; not game or participant evidence.",
+    "title": "Silence, then a familiar melody",
+    "reading": "The melody arrives after the quiet interval.",
+    "move": "arrive",
+    "reference": "",
+    "response": "",
+    "companion": "The melody",
+    "relation": "after",
+    "availability": "",
+    "order": "follows",
+    "timed": false,
+    "windowSeconds": null,
+    "cueStart": null,
+    "cueSeconds": null,
+    "protectTiming": false
+  },
+  "before": null,
+  "previewTitle": "",
+  "provenance": "Author-constructed demonstration"
+}

@@ -1,0 +1,26 @@
+{
+  "format": "beyond-words-assessment",
+  "version": 1,
+  "scene": {
+    "version": 1,
+    "context": "proposal",
+    "source": "Author-constructed demonstration with deliberately missing information.",
+    "title": "A room with an uncertain earlier visit",
+    "reading": "A changed place may be recognized.",
+    "move": "return",
+    "reference": "unknown",
+    "response": "",
+    "companion": "",
+    "relation": "none",
+    "availability": "",
+    "order": "",
+    "timed": false,
+    "windowSeconds": null,
+    "cueStart": null,
+    "cueSeconds": null,
+    "protectTiming": false
+  },
+  "before": null,
+  "previewTitle": "",
+  "provenance": "Author-constructed demonstration"
+}

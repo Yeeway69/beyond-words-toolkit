@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Beyond Words — Scene Companion</title>
+  <link rel="stylesheet" href="assessment.css">
+  <script src="assessment.js" defer></script>
+  <script src="assessment-app.js" defer></script>
+</head>
+<body>
+  <header class="masthead"><a href="#scene-heading">BEYOND WORDS <span>Scene Companion</span></a><span>Atmospheric Communication Toolkit</span></header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">From a scene to a useful comparison</p><h1>Check a scene.<br> See what changes.</h1><p>Describe a moment and what the player can encounter. See what supports its relationships—and try a change.</p></div>
+      <div class="start-tools"><label for="example">Explore a worked scene<select id="example"><option value="">Choose an example…</option></select></label><div class="file-tools"><button type="button" id="open-scene" class="quiet">Open saved work</button><button type="button" id="new-scene" class="quiet">Clear this scene</button></div></div>
+    </section>
+    <p id="notice" class="notice" role="status" aria-live="polite"></p>
+    <button type="button" class="mobile-result" id="jump-result"><span>Encounter coverage</span><strong id="compact-score">Add your scene</strong><span aria-hidden="true">↓</span></button>
+    <div class="workspace">
+      <section class="scene-editor" aria-labelledby="scene-heading">
+        <div class="section-head"><h2 id="scene-heading">Your moment</h2><span id="context-badge">Proposed scene</span></div>
+        <form id="scene-form" novalidate>
+          <label for="title">What happens here?<input id="title" name="title" placeholder="A familiar room is empty, but its tune is still playing" autocomplete="off"></label>
+          <label for="move">The player…<select id="move" name="move"><option value="">Choose what happens</option><option value="arrive">Enters or passes through</option><option value="return">Returns to something that has changed</option><option value="act">Acts on something</option></select></label>
+          <div id="reference-fields" hidden><label for="reference">Before or during the return, the player…<select id="reference" name="reference"><option value="">Choose what is available</option><option value="before">Has encountered the earlier state</option><option value="here">Can encounter the earlier state shown here</option><option value="optional">Can encounter the earlier state or skip it</option><option value="missing">Has no earlier view or reminder</option><option value="unknown">Not known yet</option></select></label></div>
+          <div id="response-fields" hidden><label for="response">The following change…<select id="response" name="response"><option value="">Choose what is encountered</option><option value="visible">Can be encountered after the action</option><option value="elsewhere">Is outside the encounter being examined</option><option value="none">Is not presented</option><option value="unknown">Not known yet</option></select></label></div>
+          <label for="relation">Another element to examine<select id="relation" name="relation"><option value="none">Just this moment for now</option><option value="together">Something accompanies this moment</option><option value="after">Something follows this moment</option></select></label>
+          <div id="companion-fields" hidden>
+            <label for="companion">What is that element?<input id="companion" name="companion" placeholder="The familiar tune" autocomplete="off"></label>
+            <div id="together-fields" hidden>
+              <div id="availability-fields"><label for="availability">During this moment…<select id="availability" name="availability"><option value="">Choose what is available</option><option value="present">Both remain available</option><option value="missing">The other element is absent</option><option value="unknown">Not known yet</option></select></label></div>
+              <label class="check"><input type="checkbox" id="timed" name="timed"><span>Use timing to check a brief event</span></label>
+              <div id="timing-fields" class="timing-fields" hidden>
+                <p class="hint">Seconds relative to the start of this moment. Estimates are fine for a proposal; leave a value empty if unknown.</p>
+                <div class="timing-control"><label for="windowSeconds">This moment lasts <span class="unit">seconds</span></label><div class="timing-inputs"><input type="range" id="window-slider" data-number="windowSeconds" min="1" max="60" step="0.5" value="10" aria-label="Moment duration in seconds"><input type="number" id="windowSeconds" name="windowSeconds" min="0.1" max="300" step="any" placeholder="?" aria-label="Exact moment duration in seconds"></div></div>
+                <div class="timing-control"><label for="cueStart">The other element starts <span class="unit">seconds after the moment begins</span></label><div class="timing-inputs"><input type="range" id="start-slider" data-number="cueStart" min="-30" max="30" step="0.5" value="0" aria-label="Other element start in seconds"><input type="number" id="cueStart" name="cueStart" min="-300" max="300" step="any" placeholder="?" aria-label="Exact other element start in seconds"></div><p class="hint">A negative value means it started earlier.</p></div>
+                <div class="timing-control"><label for="cueSeconds">It lasts <span class="unit">seconds</span></label><div class="timing-inputs"><input type="range" id="duration-slider" data-number="cueSeconds" min="0.5" max="60" step="0.5" value="5" aria-label="Other element duration in seconds"><input type="number" id="cueSeconds" name="cueSeconds" min="0.1" max="300" step="any" placeholder="?" aria-label="Exact other element duration in seconds"></div></div>
+                <label class="check"><input type="checkbox" id="protectTiming" name="protectTiming"><span>Keep this start time in suggested comparisons</span></label>
+              </div>
+            </div>
+            <div id="order-fields" hidden><label for="order">In the encounter being examined…<select id="order" name="order"><option value="">Choose the order</option><option value="follows">The other element follows this moment</option><option value="precedes">The other element comes first</option><option value="unknown">The order is not known</option></select></label></div>
+          </div>
+          <details class="context-details"><summary>Your reading and evidence <span>optional for a proposal</span></summary>
+            <label for="reading">What are you exploring?<input id="reading" name="reading" placeholder="A warm farewell with something unresolved" autocomplete="off"></label>
+            <div id="source-fields"><label for="source">Source and scene or time interval, if used<input id="source" name="source" placeholder="Recording, edition and interval" autocomplete="off"></label></div>
+            <label for="context">These facts describe<select id="context" name="context"><option value="proposal">A proposed scene</option><option value="observation">A documented encounter — facts checked against the source</option></select></label>
+          </details>
+        </form>
+        <div class="editor-actions"><a id="save-scene" class="secondary download-button" data-download="work">Save editable work</a><p>Your work stays in this tab. Save before closing.</p></div>
+      </section>
+      <section class="result-panel" id="result-panel" aria-labelledby="result-heading"><div id="result" aria-live="polite"></div></section>
+    </div>
+    <details class="about"><summary>How this applies the thesis</summary><div class="about-grid"><div><h3>Relationships before isolated features</h3><p>The engine derives requirements from your scene: a changed return needs a reference, accompanying elements need a shared opportunity, and an action’s presented consequence needs to be encountered.</p></div><div><h3>Numbers with a specific meaning</h3><p>The index describes coverage of these relationships in the situations you supply. Timing can refine it to a share of the described interval. It does not measure emotion, notice or the amount of time a scene needs to be effective.</p></div><div><h3>Your meaning stays yours</h3><p>The words you enter label the scene; the tool does not interpret free text. Its rules use the concrete selections and timings. Contrast, ambiguity and optional discovery can be intentional. You decide whether a suggested comparison serves your reading.</p></div></div><p class="scope">An author-designed application of Yiwei Ye’s Atmospheric Communication Model. Numerical conventions demonstrate one bounded use of the model; they are not empirical calibration or proof of player response. Runs offline without an account or AI service.</p></details>
+  </main>
+  <footer><span>Beyond Words · Yiwei Ye · v1.0.0</span><span><a href="https://github.com/Yeeway69/beyond-words-toolkit">Source &amp; guide</a> · <a href="https://github.com/Yeeway69/beyond-words-toolkit/releases/tag/v1.0.0">Offline download</a></span></footer>
+  <input type="file" id="file-input" accept=".json,application/json" hidden>
+</body>
+</html>

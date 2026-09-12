@@ -1,0 +1,26 @@
+{
+  "format": "beyond-words-assessment",
+  "version": 1,
+  "scene": {
+    "version": 1,
+    "context": "observation",
+    "source": "LIS-AV-002. Life is Strange (Dontnod Entertainment, 2015), original pre-remaster recording; platform, patch and build unknown. KnightWalkthroughHD, LIFE IS STRANGE FULL GAME | NoCommentary | Gameplay Walkthrough (2019-06-16), 10:25:27–10:34:50, selected Sacrifice Chloe route only. https://www.youtube.com/watch?v=qYnhpWf20So&t=37527s . Thesis close-viewing: 2026-08-30. No measured cue timing or player-response evidence.",
+    "title": "Life is Strange: the final choice and its presented consequence",
+    "reading": "The selected action is followed by a farewell, temporal return, montage and funeral. Coverage does not establish grief, closure or felt agency.",
+    "move": "act",
+    "reference": "",
+    "response": "visible",
+    "companion": "",
+    "relation": "none",
+    "availability": "",
+    "order": "",
+    "timed": false,
+    "windowSeconds": null,
+    "cueStart": null,
+    "cueSeconds": null,
+    "protectTiming": false
+  },
+  "before": null,
+  "previewTitle": "",
+  "provenance": "Documented thesis example LIS-AV-002"
+}
