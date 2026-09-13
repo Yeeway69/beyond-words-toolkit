@@ -1,6 +1,6 @@
 # Scene assessment
 
-Engine: 1.0.2
+Engine: 1.0.3
 Convention: encounter-coverage-1
 Evidence context: constructed or proposed scene
 

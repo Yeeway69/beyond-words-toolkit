@@ -240,3 +240,16 @@ test('full small input grid remains bounded and increasing overlap never lowers 
     }
   }
 });
+
+test('late companion receives an improving timing comparison while intentional and unknown timing remain protected', () => {
+  const original = { ...engine.blank(), title: 'Observatory arrival', move: 'arrive', relation: 'together', companion: 'Bell', availability: 'present', timed: true, windowSeconds: 12, cueStart: 9, cueSeconds: 6 };
+  assert.equal(engine.assess(original).score, 25);
+  const timing = engine.whatIfs(original).find(item => item.id === 'timing');
+  assert.deepEqual(timing.changes, { cueStart: 0 });
+  assert.equal(timing.result.score, 50);
+  assert.equal(timing.gain, 25);
+  assert.equal(original.cueStart, 9);
+  for (const changes of [{ protectTiming: true }, { cueStart: null }, { cueStart: 0 }, { cueStart: 2, cueSeconds: 6 }]) {
+    assert.ok(!engine.whatIfs({ ...original, ...changes }).some(item => item.id === 'timing'));
+  }
+});

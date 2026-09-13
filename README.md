@@ -4,7 +4,7 @@ A small, browser-based application of Yiwei Ye's Atmospheric Communication Model
 
 Describe a scene using ordinary facts. The tool identifies which relationships need an earlier reference, a shared encounter, an ordered presentation or a following change. It calculates **encounter coverage**, explains the result and offers a reversible comparison. You retain interpretation and artistic judgment.
 
-**[Open the toolkit](https://yeeway69.github.io/beyond-words-toolkit/)** · **[Download v1.0.2](https://github.com/Yeeway69/beyond-words-toolkit/releases/tag/v1.0.2)** · [Mechanism](MECHANISM.md) · [Examples and provenance](EXAMPLES.md)
+**[Open the toolkit](https://yeeway69.github.io/beyond-words-toolkit/)** · **[Download v1.0.3](https://github.com/Yeeway69/beyond-words-toolkit/releases/tag/v1.0.3)** · [Mechanism](MECHANISM.md) · [Examples and provenance](EXAMPLES.md)
 
 ## Try it
 
@@ -14,7 +14,7 @@ To use your own scene, clear the example, name the moment and choose what the pl
 
 ## Use without an account or installation
 
-The hosted app requires no visitor account. For offline use, download `Beyond_Words_Scene_Companion_v1.0.2.zip` from the release, extract it, and open **index.html** in a desktop browser. Keep its files together. No terminal, application server, model API or runtime AI is needed. Links to the website, source or external evidence need an internet connection; the calculation itself does not.
+The hosted app requires no visitor account. For offline use, download `Beyond_Words_Scene_Companion_v1.0.3.zip` from the release, extract it, and open **index.html** in a desktop browser. Keep its files together. No terminal, application server, model API or runtime AI is needed. Links to the website, source or external evidence need an internet connection; the calculation itself does not.
 
 The application uses `index.html`, `assessment.css`, `assessment.js` and `assessment-app.js`, with bundled typefaces in `fonts/`. Keep that directory with the runtime files for the same typography offline. This repository contains one application.
 
@@ -38,7 +38,7 @@ The tool demonstrates a bounded application of the theoretical framework. Its in
 
 The engine is in `assessment.js`; the interface is in `assessment-app.js`, `index.html` and `assessment.css`. [MECHANISM.md](MECHANISM.md) maps the rules to the framework and explains the exact calculation. [EXAMPLES.md](EXAMPLES.md) distinguishes constructed records from the documented *Life is Strange* illustration. The `examples` folder contains editable records generated from the same presets used by the application.
 
-For developers, run `node --test assessment.test.js`. The tests cover the calculation, uncertainty, comparisons, provenance requirements, import validation and boundedness. They are software checks, not participant research. The submitted software is version **1.0.2**, tagged **v1.0.2**; release checksums identify the portable archive and its contents. Citation metadata is in `CITATION.cff`.
+For developers, run `node --test assessment.test.js`. The tests cover the calculation, uncertainty, comparisons, provenance requirements, import validation and boundedness. They are software checks, not participant research. The submitted software is version **1.0.3**, tagged **v1.0.3**; release checksums identify the portable archive and its contents. Citation metadata is in `CITATION.cff`.
 
 ## Privacy and licence
 

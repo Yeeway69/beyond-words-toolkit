@@ -6,7 +6,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
-  const VERSION = '1.0.2';
+  const VERSION = '1.0.3';
   const CONVENTION = 'encounter-coverage-1';
   const EPSILON = 1e-9;
   const ENUMS = {
@@ -245,8 +245,8 @@
       add('sequence', 'Present the companion afterward', 'If the other event follows, the ordering matches the relationship you described. This is a proposed arrangement, not an observed edit.', { order: 'follows' });
     }
     if (record.relation === 'together' && record.timed && !record.protectTiming &&
-      [record.windowSeconds, record.cueStart, record.cueSeconds].every(value => value !== null) && record.cueStart < 0) {
-      add('timing', 'Start the companion at arrival', 'If the same-duration event starts when the scene window begins, more of it may be encountered. Keep the original timing when its earlier start is intentional.', { cueStart: 0 });
+      [record.windowSeconds, record.cueStart, record.cueSeconds].every(value => value !== null) && record.cueStart !== 0) {
+      add('timing', 'Start the companion at arrival', 'If the same-duration event starts when the scene window begins, more of it may be encountered. Keep the original timing when its current start is intentional.', { cueStart: 0 });
     }
     if (!candidates.length && baseline.score !== null && baseline.score <= EPSILON && concretePatches.length > 1) {
       const changes = {};
