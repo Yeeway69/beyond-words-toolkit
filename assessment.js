@@ -6,7 +6,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function () {
   'use strict';
 
-  const VERSION = '1.0.0';
+  const VERSION = '1.0.1';
   const CONVENTION = 'encounter-coverage-1';
   const EPSILON = 1e-9;
   const ENUMS = {
