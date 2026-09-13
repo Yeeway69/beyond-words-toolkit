@@ -16,7 +16,7 @@ To use your own scene, clear the example, name the moment and choose what the pl
 
 The hosted app requires no visitor account. For offline use, download `Beyond_Words_Scene_Companion_v1.0.1.zip` from the release, extract it, and open **index.html** in a desktop browser. Keep its files together. No terminal, application server, model API or runtime AI is needed. Links to the website, source or external evidence need an internet connection; the calculation itself does not.
 
-The four runtime files are `index.html`, `assessment.css`, `assessment.js` and `assessment-app.js`. This repository contains one application.
+The application uses `index.html`, `assessment.css`, `assessment.js` and `assessment-app.js`, with bundled typefaces in `fonts/`. Keep that directory with the runtime files for the same typography offline. This repository contains one application.
 
 ## Save, reopen and correct
 
@@ -44,4 +44,4 @@ For developers, run `node --test assessment.test.js`. The tests cover the calcul
 
 The application sends no entered scene data to a server and uses no analytics, external fonts or remote runtime libraries. Saved files stay where your browser downloads them. The hosting provider may process ordinary visit information; see [GitHub's Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
 
-Copyright © 2026 Yiwei Ye. The toolkit implementation (`.html`, `.css` and `.js` files) is available under the [MIT licence](LICENSE). This code licence does not grant rights to the thesis or third-party games, recordings or other referenced material. No game media or private thesis repository history is included.
+Copyright © 2026 Yiwei Ye. The toolkit implementation (`.html`, `.css` and `.js` files) is available under the [MIT licence](LICENSE). The bundled IBM Plex Sans typefaces use the [SIL Open Font License](fonts/LICENSE.txt). This code licence does not grant rights to the thesis or third-party games, recordings or other referenced material. No game media or private thesis repository history is included.
